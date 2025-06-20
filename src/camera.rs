@@ -70,6 +70,12 @@ impl MyCamera {
         self.pitch = pitch;
         self.update_projviews();
     }
+    
+    pub fn set_yaw_pitch(&mut self, yaw: f32, pitch: f32) {
+        self.yaw = yaw;
+        self.pitch = pitch;
+        self.update_projviews();
+    }
 
     /// The point the camera is looking at.
     pub fn at(&self) -> Point3<f32> {
@@ -78,17 +84,6 @@ impl MyCamera {
         let ay = view_eye[1] + self.pitch.cos();
         let az = view_eye[2] + self.yaw.sin() * self.pitch.sin();
         self.coord_system.rotation_to_y_up.inverse() * Point3::new(ax, ay, az)
-    }
-
-    fn update_restrictions(&mut self) {
-        if self.pitch <= 0.01 {
-            self.pitch = 0.01
-        }
-
-        let _pi: f32 = std::f32::consts::PI;
-        if self.pitch > _pi - 0.01 {
-            self.pitch = _pi - 0.01
-        }
     }
 
     fn update_projviews(&mut self) {
@@ -126,7 +121,6 @@ impl MyCamera {
     #[inline]
     fn set_eye(&mut self, eye: Point3<f32>) {
         self.eye = eye;
-        self.update_restrictions();
         self.update_projviews();
     }
 }
