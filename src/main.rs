@@ -17,8 +17,6 @@ fn main() {
 
     window.set_light(Light::StickToCamera);
 
-    let rot = UnitQuaternion::from_axis_angle(&Vector3::y_axis(), 0.014);
-
     window.set_framerate_limit(Some(60));
     let mut camera = MyCamera::new(
         Point3::new(0.0, 0.0, -10.0),
@@ -36,7 +34,6 @@ fn main() {
     camera.set_yaw_pitch(yaw, pitch);
 
     while window.render_with_camera(&mut camera) {
-        //c.prepend_to_local_rotation(&rot);
         // check for user input to move camera
         let mut movement: Vector3<f32> = Vector3::zeros();
 
