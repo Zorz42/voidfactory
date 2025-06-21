@@ -28,22 +28,22 @@
         # pkgs.gcc
         pkg-config
         # pkgs.SDL2
-        # pkgs.xorg.libXext
-        # pkgs.xorg.libX11
-        # pkgs.xorg.libXrandr
-        # pkgs.xorg.libXcursor
-        # pkgs.xorg.libXScrnSaver
+        xorg.libXext
+        xorg.libX11
+        xorg.libXrandr
+        xorg.libXcursor
+        xorg.libXScrnSaver
 
         #things from iced
-        # expat
-        # fontconfig
-        # freetype
-        # freetype.dev
-        # libGL
+        expat
+        fontconfig
+        freetype
+        freetype.dev
+        libGL
         # pkg-config
         # xorg.libX11
         # xorg.libXcursor
-        # xorg.libXi
+        xorg.libXi
         # xorg.libXrandr
         wayland
         libxkbcommon

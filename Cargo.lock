@@ -753,7 +753,7 @@ checksum = "e2db585e1d738fc771bf08a151420d3ed193d9d895a36df7f6f8a9456b911ddc"
 [[package]]
 name = "kiss3d"
 version = "0.35.0"
-source = "git+https://github.com/sebcrozet/kiss3d#da70cd0f8059a6adc4925479b03f968139db271b"
+source = "git+https://github.com/iKramp/kiss3d-fork#fcbdcf35392203e787aeef5b1407f68ab2361546"
 dependencies = [
  "bitflags",
  "either",
