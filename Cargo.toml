@@ -5,7 +5,6 @@ edition = "2024"
 
 [dependencies]
 kiss3d =  { git = "https://github.com/iKramp/kiss3d-fork" }
-num-traits = "0.2.19"
 
 # Enable a small amount of optimization in the dev profile.
 [profile.dev]
