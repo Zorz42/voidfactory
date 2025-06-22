@@ -27,6 +27,8 @@ fn main() {
     let mut pitch = std::f32::consts::PI / 2.0; // Initial pitch angle
     
     window.set_cursor_position(window.size()[0] as f64 / 2.0, window.size()[1] as f64 / 2.0);
+    // do not grab the cursor on MacOS, it will cause the cursor to be stationary
+    #[cfg(not(target_os = "macos"))]
     window.set_cursor_grab(true);       // Lock cursor to window
     window.hide_cursor(true);      // Hide cursor
 
