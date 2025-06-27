@@ -86,7 +86,7 @@ impl State {
         // The instance is a handle to our GPU
         // BackendBit::PRIMARY => Vulkan + Metal + DX12 + Browser WebGPU
         let instance = wgpu::Instance::new(&wgpu::InstanceDescriptor {
-            backends: wgpu::Backends::PRIMARY,
+            backends: wgpu::Backends::GL | wgpu::Backends::DX12 | wgpu::Backends::METAL,
             ..Default::default()
         });
 
